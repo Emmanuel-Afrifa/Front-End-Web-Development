@@ -1,0 +1,81 @@
+p#result {
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    font-size: larger;
+    margin: 5px;
+}
+
+button#add {
+    background-color: grey;
+    color: white;
+    width: 50%;
+    height: 60px;
+    margin: 8px;
+    position: absolute;
+    left: 25%;
+    top: 160px;
+    border-radius: 10px;
+}
+
+button#subtract {
+    background-color: grey;
+    color: white;
+    width: 50%;
+    height: 60px;
+    margin: 8px;
+    position: absolute;
+    left: 25%;
+    top: 240px;
+    border-radius: 10px;
+}
+
+button#multiply {
+    background-color: grey;
+    color: white;
+    width: 50%;
+    height: 60px;
+    margin: 8px;
+    position: absolute;
+    left: 25%;
+    top: 320px;
+    border-radius: 10px;
+}
+
+button#divide {
+    background-color: grey;
+    color: white;
+    width: 50%;
+    height: 60px;
+    margin: 8px;
+    position: absolute;
+    left: 25%;
+    top: 400px;
+    border-radius: 10px;
+}
+
+span#num1 {
+    text-align: center;
+    font-size: larger;
+    font-weight: 1600;
+    width: 10%;
+    height: 30px;
+    color: black;
+    border: inset;
+    position: absolute;
+    left: 36%;
+    top: 100px;
+}
+
+span#num2 {
+    text-align: center;
+    font-size: larger;
+    font-weight: 1600;
+    width: 10%;
+    height: 30px;
+    color: black;
+    border: inset;
+    position: absolute;
+    left: 54%;
+    top: 100px;
+}
