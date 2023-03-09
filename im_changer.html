@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image guesser</title>
+
+    <style>
+        div {
+            background-color: white;
+        }
+
+        img {
+            width: 27%;
+            height: 350px;
+            margin-left: 3%;
+            margin-right: 3%;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <img id="zero" src="./zeroblur.jpg" title="Click on the image to show the answer">
+        <img id="one" src="./oneblur.jpg" title="Click on the image to show the answer">
+        <img id="two" src="./twoblur.jpg" title="Click on the image to show the answer">
+        <img id="three" src="./threeblur.jpg" title="Click on the image to show the answer">
+        <img id="four" src="./fourblur.jpg" title="Click on the image to show the answer">
+        <img id="five" src="./fiveblur.jpg" title="Click on the image to show the answer">
+    </div>
+    
+
+    <script>
+        
+
+        function init(){
+            var images = document.getElementsByTagName("img");
+            for (var i=0; i<images.length; i++){
+                //The commented statement unblurs the image when the user clcks on it.
+             //   images[i].onclick = showAns;
+                images[i].onmouseover = mousein;
+                images[i].onmouseout = mouseout;
+            }
+        };
+
+        // Function that reveals the blurred image when the user clicks on it
+        // function showAns(eventObj) {
+        //     var image = eventObj.target;
+ 
+        //     var name = image.id;
+        //     name = name + ".jpg";
+        //     image.src = name;
+
+        //     setTimeout(reblur,2000,image);
+        // }
+
+        
+        // Function that blurs the image again after it has been revealed
+        // function reblur(image){
+        //     let name = image.id;
+        //     name = name + "blur.jpg"
+        //     image.src = name;
+        // }
+
+        function mousein(eventObj){
+            var image = eventObj.target;
+ 
+            var name = image.id;
+            name = name + ".jpg";
+            image.src = name;
+        }
+
+        function mouseout(eventObj){
+            var image = eventObj.target;
+            var name = image.id;
+
+            name = name + "blur.jpg";
+            image.src = name;
+        }
+
+        window.onload = init;
+        
+    </script>
+</body>
+</html>
